@@ -1,0 +1,36 @@
+Fake	        12.0.623215
+1 -0.315253	10. 0.537633
+2 0.291232	2. 0.291232
+3 -0.442333	9 -0.116346
+4 -0.503479	14 -0 .121648   
+5 -0.474658	8  -0.213389  1 -0.315253
+6 -0.344337	13 -0.331630
+7 -0.513119	6 -0.344337
+8  -0.213389	3 3 -0.442333
+9 -0.116346	5 -0.474658
+10 0.537633	4 -0.503479
+11 -0.858208	7 -0.513119
+12 0.623215	11 -0.858208
+13 -0.331630	
+14 -0 .121648	
+1. 000000
+
+feature_cols = ['Nums/Length Username',  '#Posts', '#Followers','#Following','Index of Activity','Average of Likes']
+feature_cols = ['Profile Pic', 'Nums/Length Username', 'Full Name Words', 'Bio Length', 'External Url','Verified','Business', '#Posts', '#Followers','#Following','Last Post Recent','%Post Single Day','Index of Activity','Average of Likes']
+
+It seems like you might be referring to a ratio or feature in a fake profile detection dataset that involves the number of numeric characters in a username relative to the total length of the username. If that's the case, you could calculate this as follows:
+
+\[ \text{Nums/Length Username} = \frac{\text{Number of Numeric Characters in Username}}{\text{Length of Username}} \]
+
+Here's a breakdown:
+
+- **Number of Numeric Characters in Username:** Count the total number of numeric characters (0-9) in the username.
+- **Length of Username:** Calculate the total length of the username, including all characters (letters, numbers, symbols).
+
+Dividing the number of numeric characters by the total length provides a ratio that represents the proportion of numeric characters in the username. This can be a useful feature for fake profile detection, as certain patterns or anomalies in the usage of numeric characters might be indicative of automated or generated usernames often associated with fake profiles.
+
+As an example, if the username is "FakeUser123," where there are 3 numeric characters and the total length is 11, the calculation would be:
+
+\[ \text{Nums/Length Username} = \frac{3}{11} \]
+
+This would result in a numerical value representing the ratio of numeric characters to the total length of the username. Analyzing such features can contribute to the development of effective models for fake profile detection.
